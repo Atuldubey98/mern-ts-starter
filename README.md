@@ -72,7 +72,7 @@ npm run install:backend
 ```
 
 ```bash
-docker build -t backend -f ./backend/Dockerfile.dev .
+docker build -t backend -f ./backend/Dockerfile.dev ./backend
 ```
 
 #### Reactjs Server
@@ -84,7 +84,7 @@ npm run install:frontend
 ```
 
 ```bash
-docker build -t frontend -f ./backend/Dockerfile.dev .
+docker build -t frontend -f ./backend/Dockerfile.dev ./frontend
 ```
 
 ### Spinning the servers - development
