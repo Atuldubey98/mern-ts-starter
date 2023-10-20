@@ -161,4 +161,26 @@ Here are some related projects
 
 Minimum setup has beend done for development and production purposes with the benefits of docker in development and docker with nginx in production. Mongodb has also been deployed to the Docker container. 
 
+### To avoid all the above setup using scripts
+
+Development
+
+```bash
+chmod +x ./dev-start.sh
+```
+
+```bash
+./dev-start.sh
+```
+
+
+Production
+
+```bash
+chmod +x ./prod-start.sh
+```
+
+```bash
+./prod-start.sh
+```
 In case of any queries feel free to contact me.
