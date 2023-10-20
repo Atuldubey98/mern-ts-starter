@@ -1,0 +1,19 @@
+{
+  "name": "mern-ts-starter",
+  "version": "1.0.0",
+  "description": "Mern starter project with typescript",
+  "scripts": {
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "build": "npm run build:frontend && npm run build:backend",
+    "start": "cd backend && npm start"
+  },
+  "keywords": [
+    "express",
+    "reactjs",
+    "vite",
+    "nodejs"
+  ],
+  "author": "Atul Dubey",
+  "license": "ISC"
+}
