@@ -15,7 +15,7 @@ const app: Application = express();
 
 app.use(morgan(isEnvDev ? "dev" : "combined"));
 
-app.get("/", (_, res: Response) => {
+app.get("/api", (_, res: Response) => {
   return res.send("Welcome to Express & TypeScript Server");
 });
 
