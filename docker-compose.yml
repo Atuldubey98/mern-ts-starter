@@ -1,0 +1,37 @@
+version: "3.1"
+services:
+  mongo:
+    image: mongo:4.4
+    restart: always
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+  backend:
+    image: backend
+    build: ./backend
+    restart: always
+    depends_on:
+      - mongo
+    volumes:
+      - ./backend/:/usr/src/app
+      - /usr/src/app/node_modules
+    env_file:
+      - .env.development
+    ports:
+      - 9000:9000
+  frontend:
+    image: frontend
+    build: ./frontend
+    restart: always
+    stdin_open: true
+    volumes:
+      - ./frontend/:/usr/src/app
+      - /usr/src/app/node_modules
+    depends_on:
+      - backend
+    env_file:
+      - .env.development
+    ports:
+      - 5173:5173

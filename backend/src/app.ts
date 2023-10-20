@@ -1,7 +1,7 @@
-import { MONGO_URI, isEnvDev } from "./config";
 import express, { Application, Response } from "express";
 import mongoose from "mongoose";
 import morgan from "morgan";
+import { MONGO_URI, isEnvDev } from "./config";
 
 mongoose
   .connect(MONGO_URI)
