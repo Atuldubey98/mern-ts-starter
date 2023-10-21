@@ -5,6 +5,8 @@
   "main": "./src/server.ts",
   "scripts": {
     "prebuild": "rimraf ./dist && npm install",
+    "docker:build:dev": "docker build -t backend -f ./Dockerfile.dev ./",
+    "docker:build:prod": "docker build -t backend ./",
     "build": "npx tsc",
     "prestart": "npm run build",
     "start": "node ./dist/server.js",
